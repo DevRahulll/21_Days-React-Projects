@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/randomcolor" element={<RandomColor />} />
         <Route path="/accordian" element={<Accordian />} />
-        <Route path="/starrating" element={<StarRating />} />
+        <Route path="/starrating" element={<StarRating noOfStars={10} />} />
       </Routes>
     </div>
   );
