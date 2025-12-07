@@ -5,6 +5,7 @@ import StarRating from "./components/03starRating/StarRating";
 import ImageSlider from "./components/04ImageSlider/ImageSlider";
 import LoadMoreData from "./components/05LoadMoreData/LoadMoreData";
 import QrGenerator from "./components/06QrGenerator/QrGenerator";
+import TreeView from "./components/07TreeView/TreeView";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/imageslider" element={<ImageSlider />} />
         <Route path="/loadmoredata" element={<LoadMoreData />} />
         <Route path="/qrcodegenerator" element={<QrGenerator />} />
+        <Route path="/treeview" element={<TreeView />} />
       </Routes>
     </div>
   );
