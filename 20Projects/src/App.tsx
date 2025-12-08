@@ -6,6 +6,7 @@ import ImageSlider from "./components/04ImageSlider/ImageSlider";
 import LoadMoreData from "./components/05LoadMoreData/LoadMoreData";
 import QrGenerator from "./components/06QrGenerator/QrGenerator";
 import TreeView from "./components/07TreeView/TreeView";
+import ThemeToggler from "./components/08ThemeToggler/ThemeToggler";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/loadmoredata" element={<LoadMoreData />} />
         <Route path="/qrcodegenerator" element={<QrGenerator />} />
         <Route path="/treeview" element={<TreeView />} />
+        <Route path="/themetoggler" element={<ThemeToggler />} />
       </Routes>
     </div>
   );
