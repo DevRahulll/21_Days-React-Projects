@@ -22,7 +22,7 @@ const TreeItem = ({ item }: TreeItemProps) => {
   return (
     <li className="mb-2">
       <div className="flex cursor-pointer items-center gap-2">
-        <h1 className="font-medium text-gray-300">{item.label}</h1>
+        <h1 className="text-xl font-medium text-gray-300">{item.label}</h1>
         {item.children && item.children.length ? (
           <span onClick={() => handleToggleChildren(item.label)}>
             {displayCurrentChildren[item.label] ? (
