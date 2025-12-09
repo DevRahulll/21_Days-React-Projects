@@ -7,6 +7,7 @@ import LoadMoreData from "./components/05LoadMoreData/LoadMoreData";
 import QrGenerator from "./components/06QrGenerator/QrGenerator";
 import TreeView from "./components/07TreeView/TreeView";
 import ThemeToggler from "./components/08ThemeToggler/ThemeToggler";
+import ScrollIndicator from "./components/09scroll-Indicator/ScrollIndicator";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/qrcodegenerator" element={<QrGenerator />} />
         <Route path="/treeview" element={<TreeView />} />
         <Route path="/themetoggler" element={<ThemeToggler />} />
+        <Route path="/scrollindicator" element={<ScrollIndicator />} />
       </Routes>
     </div>
   );
