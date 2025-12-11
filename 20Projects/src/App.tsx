@@ -9,6 +9,7 @@ import TreeView from "./components/07TreeView/TreeView";
 import ThemeToggler from "./components/08ThemeToggler/ThemeToggler";
 import ScrollIndicator from "./components/09scroll-Indicator/ScrollIndicator";
 import Tabs from "./components/10CustomTabs/Tabs";
+import Modal from "./components/11ModalPopup/Modal";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/themetoggler" element={<ThemeToggler />} />
         <Route path="/scrollindicator" element={<ScrollIndicator />} />
         <Route path="/customtabs" element={<Tabs />} /> // naming error
+        <Route path="/modalpopup" element={<Modal />} />
       </Routes>
     </div>
   );
