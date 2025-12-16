@@ -12,6 +12,7 @@ import Tabs from "./components/10CustomTabs/Tabs";
 import Modal from "./components/11ModalPopup/Modal";
 import GithubUserFinder from "./components/12GithubProfileFinder/GithubProfile";
 import UseFetchTest from "./components/13useFetch/UseFetchTest";
+import ClickOutsidehookTest from "./components/14useOutsideClick/ClickOutsidehookTest";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/modalpopup" element={<Modal />} />
         <Route path="/githubuserfinder" element={<GithubUserFinder />} />
         <Route path="/usefetch" element={<UseFetchTest />} />
+        <Route path="/useclickoutsidehook" element={<ClickOutsidehookTest />} />
       </Routes>
     </div>
   );
