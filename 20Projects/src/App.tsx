@@ -11,6 +11,7 @@ import ScrollIndicator from "./components/09scroll-Indicator/ScrollIndicator";
 import Tabs from "./components/10CustomTabs/Tabs";
 import Modal from "./components/11ModalPopup/Modal";
 import GithubUserFinder from "./components/12GithubProfileFinder/GithubProfile";
+import UseFetchTest from "./components/13useFetch/UseFetchTest";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/customtabs" element={<Tabs />} /> // naming error
         <Route path="/modalpopup" element={<Modal />} />
         <Route path="/githubuserfinder" element={<GithubUserFinder />} />
+        <Route path="/usefetch" element={<UseFetchTest />} />
       </Routes>
     </div>
   );
