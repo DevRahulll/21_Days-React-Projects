@@ -13,6 +13,7 @@ import Modal from "./components/11ModalPopup/Modal";
 import GithubUserFinder from "./components/12GithubProfileFinder/GithubProfile";
 import UseFetchTest from "./components/13useFetch/UseFetchTest";
 import ClickOutsidehookTest from "./components/14useOutsideClick/ClickOutsidehookTest";
+import UseWindowResizeTest from "./components/15useWindowResize/UseWindowResizeTest";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/githubuserfinder" element={<GithubUserFinder />} />
         <Route path="/usefetch" element={<UseFetchTest />} />
         <Route path="/useclickoutsidehook" element={<ClickOutsidehookTest />} />
+        <Route path="/usewindowresize" element={<UseWindowResizeTest />} />
       </Routes>
     </div>
   );
