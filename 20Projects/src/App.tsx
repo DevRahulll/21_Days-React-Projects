@@ -14,6 +14,7 @@ import GithubUserFinder from "./components/12GithubProfileFinder/GithubProfile";
 import UseFetchTest from "./components/13useFetch/UseFetchTest";
 import ClickOutsidehookTest from "./components/14useOutsideClick/ClickOutsidehookTest";
 import UseWindowResizeTest from "./components/15useWindowResize/UseWindowResizeTest";
+import ScrollCustomize from "./components/16Scroll/ScrollCustomize";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/usefetch" element={<UseFetchTest />} />
         <Route path="/useclickoutsidehook" element={<ClickOutsidehookTest />} />
         <Route path="/usewindowresize" element={<UseWindowResizeTest />} />
+        <Route path="/scrollcustomize" element={<ScrollCustomize />} />
       </Routes>
     </div>
   );
