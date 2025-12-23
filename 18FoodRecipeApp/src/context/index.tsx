@@ -4,10 +4,21 @@ import { useNavigate } from "react-router-dom";
 interface GlobalContextType {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
+
   loading: boolean;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+
   recipeList: RecipeType[];
   setRecipeList: React.Dispatch<React.SetStateAction<RecipeType[]>>;
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+
+  recipeDetailsData: RecipeDetailsResponse | null;
+  setRecipeDetailsData: React.Dispatch<
+    React.SetStateAction<RecipeDetailsResponse | null>
+  >;
+
+  favouritesList: RecipeDetailsType[];
+  setFavouritesList: React.Dispatch<React.SetStateAction<RecipeDetailsType[]>>;
+
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
@@ -22,6 +33,24 @@ export interface RecipeType {
   publisher: string;
 }
 
+export interface IngredientType {
+  quantity: number | null;
+  unit: string;
+  description: string;
+}
+
+export interface RecipeDetailsType {
+  id: string;
+  title: string;
+  image_url: string;
+  publisher: string;
+  ingredients: IngredientType[];
+}
+
+export interface RecipeDetailsResponse {
+  recipe: RecipeDetailsType;
+}
+
 export const GlobalContext = createContext<GlobalContextType | undefined>(
   undefined
 );
@@ -30,6 +59,9 @@ export default function GlobalState({ children }: GlobalStateProps) {
   const [search, setSearch] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [recipeList, setRecipeList] = useState<RecipeType[]>([]);
+  const [recipeDetailsData, setRecipeDetailsData] =
+    useState<RecipeDetailsResponse | null>(null);
+  const [favouritesList, setFavouritesList] = useState<RecipeDetailsType[]>([]);
 
   const navigate = useNavigate();
 
@@ -65,6 +97,10 @@ export default function GlobalState({ children }: GlobalStateProps) {
         setLoading,
         recipeList,
         setRecipeList,
+        recipeDetailsData,
+        setRecipeDetailsData,
+        favouritesList,
+        setFavouritesList,
       }}
     >
       {children}

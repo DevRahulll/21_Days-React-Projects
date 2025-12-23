@@ -15,7 +15,7 @@ export default function Item({ item }: ItemProps) {
         <span className="text-sm text-cyan-400 font-medium">
           {item?.publisher}
         </span>
-        <h3 className="font-bold text-xl truncate text-gray-200">
+        <h3 className="font-md text-md truncate text-gray-200 ">
           {item?.title}
         </h3>
         <button className="py-2 px-6 bg-gray-600 rounded-md mt-1">
