@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="flex items-center justify-between p-2 mt-5">
       <div className=" ml-10">
         <h1 className="text-4xl font-bold truncate tracking-wider text-[#BB86FC]">
-          REACT REDUX SHOPPING CART
+          <Link to={"/"}>REACT REDUX SHOPPING CART</Link>
         </h1>
       </div>
       <ul className="flex items-center gap-10 mr-14 text-2xl font-semibold">
