@@ -1,11 +1,22 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import TransactionChartSummary from "./Chart";
+import AddTransaction from "./AddTransaction";
+
+interface SummaryProps {
+  onClose: () => void;
+  isOpen: boolean;
+  totalExpense: number;
+  totalIncome: number;
+}
 
 export default function Summary({
   onClose,
   isOpen,
   totalExpense,
   totalIncome,
-}) {
+}: SummaryProps) {
+  const balance = totalIncome - totalExpense;
+
   return (
     <Box
       p="6"
@@ -39,7 +50,7 @@ export default function Summary({
           mr={"2"}
         >
           <Heading size={"md"} mb={"4"} color={"gray.700"}>
-            Balance is ₹ {totalIncome - totalExpense}
+            Balance is ₹ {balance}
           </Heading>
           <Flex
             justifyContent={"space-evenly"}
@@ -54,7 +65,30 @@ export default function Summary({
               <Heading color={"gray.700"}>₹ {totalIncome}</Heading>
               <Text color={"gray.600"}>Total Income</Text>
             </Flex>
+            <Flex flexDirection={"column"}>
+              <Heading color={"gray.700"}>₹ {totalExpense}</Heading>
+              <Text color={"gray.600"}>Total Expense</Text>
+            </Flex>
           </Flex>
+        </Flex>
+        <Box
+          flex={1}
+          mt={"10"}
+          ml={"-90px"}
+          mr={"5"}
+          width={"300px"}
+          height={"300px"}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
+          <TransactionChartSummary
+            expense={totalExpense}
+            income={totalIncome}
+          />
+        </Box>
+        <Flex>
+          <AddTransaction onClose={onClose} isOpen={isOpen} />
         </Flex>
       </Flex>
     </Box>
