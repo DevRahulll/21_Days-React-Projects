@@ -89,7 +89,12 @@ export default function AddTransaction({
   }
 
   return (
-    <DialogRoot open={isOpen} onOpenChange={onClose}>
+    <DialogRoot
+      open={isOpen}
+      onOpenChange={({ open }) => {
+        if (!open) onClose();
+      }}
+    >
       <DialogContent>
         <DialogHeader>Add New Transaction</DialogHeader>
         <DialogCloseTrigger />
